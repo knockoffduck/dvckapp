@@ -3,7 +3,6 @@
 	import papa from 'papaparse';
 	import Dropzone from 'svelte-file-dropzone';
 	import { purchases, transactions } from '../../stores/transactionsStore';
-	import { supabase } from '../../supabase';
 	import Charts from './charts.svelte';
 	import { handleFilesSelect } from './fileHandler.svelte';
 
