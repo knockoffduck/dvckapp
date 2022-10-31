@@ -5,7 +5,7 @@
 	let fetched = false;
 
 	async function onbuttonclick() {
-		let url = 'https://150.230.12.140:3000/api';
+		let url = 'https://150.230.12.140/api';
 		let data = await superagent.get(url);
 		arr.push(await data.text);
 		if (arr) {
