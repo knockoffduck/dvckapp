@@ -1,5 +1,6 @@
 <script>
 	import superagent from 'superagent';
+	import '../../app.css';
 
 	let arr = [];
 	let fetched = false;
@@ -14,10 +15,18 @@
 	}
 </script>
 
-<div class="flex h-screen w-screen m-auto">
-	<button class="btn" on:click={onbuttonclick}>get timetable</button>
-</div>
-{#if fetched}
-	<img src={arr[0]} alt="timetable" />
-{/if}
-<div />
+<body class="font-poppins bg-black w-screen h-screen">
+	<div class="flex h-screen  place-items-center">
+		<div class="m-auto">
+			{#if fetched}
+				<div class="grid gap-3">
+					<img src={arr[0]} alt="timetable" />
+					<button class="btn" on:click={onbuttonclick}>get timetable</button>
+				</div>
+			{:else}
+				<button class="btn" on:click={onbuttonclick}>get timetable</button>
+			{/if}
+			<div />
+		</div>
+	</div>
+</body>
