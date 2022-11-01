@@ -4,7 +4,7 @@
 </script>
 
 <main class="font-poppins bg-black w-screen h-screen">
-	<div transition:fade class="flex h-screen  place-items-center">
+	<div out:fade class="flex h-screen  place-items-center">
 		<div class="m-auto">
 			<div class="flex justify-center  m-auto">
 				<h1 class="text-9xl text-white font-bold tracking-tight ">Hello.</h1>

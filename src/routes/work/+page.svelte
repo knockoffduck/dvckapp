@@ -24,17 +24,18 @@
 	}
 </script>
 
-<body transition:fade class="font-poppins bg-black w-screen h-screen">
-	<div class="flex h-screen  place-items-center">
+<body transition:fade class="font-poppins bg-black w-screen h-screen justify-center">
+	<div class="navbar sticky top-0 z-50">
+		<div class="flex-1">
+			<a href="/" class="btn btn-ghost normal-case text-xl">Home</a>
+		</div>
+	</div>
+	<div class="flex h-[calc(100vh-64px)] place-items-center">
 		<div class="m-auto">
 			{#if fetched}
 				<div class="grid gap-3">
-					<img transition:fade src={arr[0]} alt="timetable" />
-					<a
-						href="https://nextlevel.worldmanager.com/content/forum_uploads/files/2292/Roster_09_11_2022.jpg"
-						download="Timetable"
-						class="btn">Download</a
-					>
+					<h3 class="text-4xl text-center text-white">iPlay Timetable Starting {arr[0][0]}</h3>
+					<img transition:fade src={arr[0][1]} alt="timetable" />
 				</div>
 			{:else if clicked}
 				<div class="loadingio-spinner-eclipse-h5of8z52o7">
